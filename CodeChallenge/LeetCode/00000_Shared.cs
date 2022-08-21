@@ -26,5 +26,11 @@
                 this.next = child;
             }
         }
+
+        // insert new value at the start
+        public void add(int val = 0, ListNode next = null)
+        {
+            next = new ListNode(val, next);
+        }
     }
 }

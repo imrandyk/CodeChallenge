@@ -20,6 +20,11 @@ namespace CodeChallenge
             Console.WriteLine($"{result} Should be: {should}");
         }
 
+        public static void Should(bool result, string should)
+        {
+            Console.WriteLine($"{result} Should be: {should}");
+        }
+
         public static void Should(int result, string should)
         {
             Console.WriteLine($"{result} Should be: {should}");
@@ -34,16 +39,18 @@ namespace CodeChallenge
         {
             var n = result;
             var r = new List<int>();
+            var cnt = 0;
             if(n != null)
             {
-                while(n.next != null)
+                while(n.next != null && cnt < 100)
                 {
                     r.Add(n.val);
                     n = n.next;
+                    cnt++;
                 }
                 r.Add(n.val);
             }
-            Should(r.ToArray(), should);
+            Should(r.ToArray(), cnt == 100 ? $"{should} was repeating": should );
         }
 
         public static void Wait()
