@@ -1,0 +1,30 @@
+﻿namespace CodeChallenge.LeetCode
+{
+    public class ListNode
+    {
+        public int val;
+        public ListNode next;
+        public ListNode(int val = 0, ListNode next = null)
+        {
+            this.val = val;
+            this.next = next;
+        }
+
+        public ListNode(int[] vs)
+        {
+            ListNode child = null;
+
+            if(vs.Length != 0)
+            {
+                for (int i = vs.Length - 1; i > 0; i--)
+                {
+                    var n = new ListNode(vs[i], child);
+                    child = n;
+                }
+
+                this.val = vs[0];
+                this.next = child;
+            }
+        }
+    }
+}
