@@ -57,10 +57,14 @@ var head3 = new ListNode(1);
 head3.next = new ListNode(2);
 Log.Should(leetCode.DetectCycle(head3), "-1");
 
-Log.Title("MiddleNode");
+Log.Title("LongestPalindrome");
 Log.Should(leetCode.LongestPalindrome("abccccdd"), "7");
 Log.Should(leetCode.LongestPalindrome("a"), "1");
 Log.Should(leetCode.LongestPalindrome("bananas"), "5");
 Log.Should(leetCode.LongestPalindrome("civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth"), "983");
+
+Log.Title("ProductExceptSelf");
+Log.Should(leetCode.ProductExceptSelf(new int[] { 1, 2, 3, 4 }), "[24, 12, 8, 6]");
+Log.Should(leetCode.ProductExceptSelf(new int[] { -1, 1, 0, -3, 3 }), "[0, 0, 9, 0, 0]");
 
 Log.Wait();
