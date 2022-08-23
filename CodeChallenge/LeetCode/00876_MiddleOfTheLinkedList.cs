@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CodeChallenge.LeetCode
+﻿namespace CodeChallenge.LeetCode
 {
     partial class LeetCode
     {
@@ -12,14 +6,14 @@ namespace CodeChallenge.LeetCode
         {
             var d = 0;
             var t = head;
-            while(t.next != null)
+            while (t.next != null)
             {
                 d++;
                 t = t.next;
             }
             t = head;
 
-            d = d % 2 == 0 ? d/2 : (d+1)/2;
+            d = d % 2 == 0 ? d / 2 : (d + 1) / 2;
 
             for (var i = 0; i < d; i++)
                 t = t.next;

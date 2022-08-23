@@ -35,6 +35,11 @@ namespace CodeChallenge
             Console.WriteLine($"[{string.Join(", ", result)}] Should be: {should}");
         }
 
+        public static void Should(IList<int> result, string should)
+        {
+            Console.WriteLine($"[{string.Join(", ", result)}] Should be: {should}");
+        }
+
         public static void Should(ListNode result, string should)
         {
             var n = result;
