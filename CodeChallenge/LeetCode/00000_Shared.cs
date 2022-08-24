@@ -14,7 +14,7 @@
         {
             ListNode child = null;
 
-            if(vs.Length != 0)
+            if (vs.Length != 0)
             {
                 for (int i = vs.Length - 1; i > 0; i--)
                 {
@@ -50,6 +50,19 @@
         {
             val = _val;
             children = _children;
+        }
+    }
+
+    public class TreeNode
+    {
+        public int val;
+        public TreeNode left;
+        public TreeNode right;
+        public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
+        {
+            this.val = val;
+            this.left = left;
+            this.right = right;
         }
     }
 }
